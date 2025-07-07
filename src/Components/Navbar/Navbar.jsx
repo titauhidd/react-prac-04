@@ -14,13 +14,13 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-amber-400">
+    <nav className="bg-amber-400 p-8">
       {/* <h2>My nav</h2> */}
       <div
         onClick={() => {
           setOpen(!open);
         }}
-        className="text-3xl"
+        className="text-3xl md"
       >
         {open === true ? (
           <AiTwotoneCloseSquare></AiTwotoneCloseSquare>
@@ -29,7 +29,8 @@ const Navbar = () => {
         )}
       </div>
 
-      <ul className="flex gap-8 text-2xl">
+      <ul className={`md:flex gap-8 text-2xl absolute md:static bg-amber-600 duration-1000 
+        ${open ? 'top-16': '-top-44'}`}>
         {routes.map((routeli) => {
           return <Linkss key={routeli.id} routeli={routeli}></Linkss>;
         })}

@@ -6,6 +6,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <h1 className="text-5xl">Vite + React</h1>
+      <h1 className="text-5xl">Vite + React</h1>
     </>
   );
 }
